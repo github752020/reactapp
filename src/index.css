@@ -26,11 +26,24 @@ a:hover {
 
 body {
   margin: 0;
+  min-width: 390px;
+}
+
+nav {
+    height: 100px;
+    min-width: 390px;
+    display: flex;
+    padding: 1px 10px;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   font-size: 2.3em;
   line-height: 1.1;
+}
+
+.App{
+    max-width: 1200px;
 }
 
 button {
@@ -65,8 +78,11 @@ button:focus-visible {
   margin: 0;
 }
 
+.nav--logo {
+    max-width: 150px;
+}
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     color: #213547;
     background-color: #ffffff;

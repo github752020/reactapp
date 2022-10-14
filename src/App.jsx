@@ -1,57 +1,39 @@
-import Contact from "./Contact";
-import { useState, useEffect } from 'react';
 
+import Navbar from "./Navbar";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import red from '@mui/material/colors/blue';
+import {Typography} from "@mui/material";
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import Contactlist from "./Contactlist";
 
 const darkTheme = createTheme({
     palette: {
+        primary: red,
         mode: 'dark',
+        
     },
 });
 
 
 function App() {
-    const [contacts, setContacts] = useState([]);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/users")
-            .then((response) => response.json())
-            .then((response) => {
-                setContacts(response);
-                setError(null);
-            })
-                .catch(setError);
-    }, []);
-
-    if (error) return <p>An error occurred</p>
 
   return (
       <ThemeProvider theme={darkTheme}>
           <CssBaseline />
-
-      <div className="App">
-          {contacts.map(({ id, name, email, address, phone,website, company }) => (
-              <Contact
-                  key={id}
-                  id={id}
-                  name={name}
-                  email={email}
-                  street={address.street}
-                  suite={address.suite}
-                  city={address.city}
-                  zipcode={address.zipcode}
-                  phone={phone}
-                  website={website}
-                  company={company.name}
-                  bs={company.bs}
-                  catchPhrase={company.catchPhrase}
-              />
-          ))}
-          </div>
-
+          <Router>
+              <Navbar />
+              <Routes>
+                  <Route path='/projects' element={<Typography variant="h5" component="div">
+                      Projects
+                  </Typography>} />
+                  <Route path='/contact' element={<Contactlist />} />
+                  <Route path='/posts' element={<Typography variant="h5" component="div">
+                      Post
+                  </Typography>} />
+              </Routes>
+          </Router>
       </ThemeProvider>
   );
 }

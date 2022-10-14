@@ -12,7 +12,7 @@ import {
     CardHeader,
     IconButton,
 } from "@mui/material";
-import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const bull = (
     <Box
@@ -23,18 +23,18 @@ const bull = (
     </Box>
 );
 
-export default function BasicCard(props) {
+export default function BasicCard(props: any) {
     return (
         
         <Box m={2} pt={3}>
             <Card sx={{ minWidth: 275 }}>
                 <CardHeader
-                    avatar={<Avatar>{props.id}</Avatar>}
+                    avatar={<Avatar alt={props.name} src={'https://i.pravatar.cc/150?u=' + props.email} />}
                     title={props.company}
                     subheader={props.bs}
                     action={
                         <IconButton>
-                            <AddAPhotoIcon />
+                            <FavoriteIcon />
                         </IconButton>
                     }
                 />

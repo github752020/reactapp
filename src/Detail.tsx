@@ -17,23 +17,23 @@ const bull = (
     </Box>
 );
 
-export default function Detail(props) {
+export default function Detail(props: any) {
     return (
         
         <Box sx={{ width: '100%' }}>
             
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                <Grid item xs={12} sm={4} md={3} lg={2}>
+                <Grid item xs={12} sm={4} md={3}>
                     <Typography variant="body2">
                         <CallIcon />{props.phone}
                     </Typography>
                 </Grid>
-                <Grid item xs={12} sm={4} md={3} lg={2}>
+                <Grid item xs={12} sm={4} md={3}>
                     <Typography variant="body2">
                         <EmailIcon />{props.email}
                     </Typography>
                 </Grid>
-                <Grid item xs={12} sm={4} md={3} lg={2}>
+                <Grid item xs={12} sm={4} md={3}>
                     <Typography variant="body2">
                         <LanguageIcon />{props.website}
                     </Typography>
