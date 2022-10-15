@@ -2,14 +2,11 @@
   "name": "react_contactlist",
   "private": false,
   "version": "0.0.1",
-  "homepage": "https://github752020.github.io/react_contact_list",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",

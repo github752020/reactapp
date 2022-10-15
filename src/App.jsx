@@ -10,7 +10,6 @@ import Contactlist from "./Contactlist";
 
 const darkTheme = createTheme({
     palette: {
-        primary: red,
         mode: 'dark',
         
     },
