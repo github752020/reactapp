@@ -39,7 +39,7 @@ function Contactlist() {
                   catchPhrase={company.catchPhrase}
               />
           ))}
-          </div>
+      </div>
 
   );
 }

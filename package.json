@@ -3,7 +3,10 @@
   "private": false,
   "version": "0.0.1",
   "type": "module",
+  "homepage": "https://github752020.github.io/reactapp",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"

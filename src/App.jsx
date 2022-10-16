@@ -1,7 +1,6 @@
 
 import Navbar from "./Navbar";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import red from '@mui/material/colors/blue';
 import {Typography} from "@mui/material";
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -21,7 +20,7 @@ function App() {
   return (
       <ThemeProvider theme={darkTheme}>
           <CssBaseline />
-          <Router>
+          <Router basename="/reactapp" >
               <Navbar />
               <Routes>
                   <Route path='/projects' element={<Typography variant="h5" component="div">

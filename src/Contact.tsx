@@ -38,31 +38,31 @@ export default function BasicCard(props: any) {
                         </IconButton>
                     }
                 />
-            <CardContent>
-                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                        {}
-                </Typography>
-                    <Typography variant="h5" component="div">
-                        {props.name}
-                </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                        {props.catchPhrase}
-                </Typography>
-                        <Detail
-                            email={props.email}
-                            phone={props.phone}
-                            website={props.website}
-                            suite={props.suite}
-                            street={props.street}
-                            city={props.city}
-                            zipcode={props.zipcode}
-                        />
-                    <br />
-            </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
+                <CardContent>
+                        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                            {}
+                    </Typography>
+                        <Typography variant="h5" component="div">
+                            {props.name}
+                    </Typography>
+                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                            {props.catchPhrase}
+                    </Typography >
+                            <Detail
+                                email={props.email}
+                                phone={props.phone}
+                                website={props.website}
+                                suite={props.suite}
+                                street={props.street}
+                                city={props.city}
+                                zipcode={props.zipcode}
+                            />
+                        <br />
+                </CardContent>
+                <CardActions>
+                    <Button size="small">Learn More</Button>
+                </CardActions>
             </Card>
-            </Box>
+        </Box>
     );
 }
